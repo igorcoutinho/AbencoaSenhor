@@ -48,12 +48,7 @@ public class TarefaServiceTest {
 		assertNotNull(tarefa);
 	}
 
-	@Test
-	public void testBuscarPorId() {
-		Optional<Tarefa> tarefa = this.tarefaService.buscarPorId(1L);
-
-		assertTrue(tarefa.isPresent());
-	}
+	
 
 	
 }
