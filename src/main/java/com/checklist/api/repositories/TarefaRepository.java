@@ -13,6 +13,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.checklist.api.entities.Tarefa;
+import com.checklist.api.entities.Usuario;
 
 
 @Transactional(readOnly = true)
@@ -26,4 +27,5 @@ public interface TarefaRepository extends JpaRepository<Tarefa, Long>{
 	Page<Tarefa> findByUsuarioId(@Param("usuarioId") Long usuarioId, Pageable pageable);
 	
 	Optional<Tarefa> findById(Long id);
+	
 }
