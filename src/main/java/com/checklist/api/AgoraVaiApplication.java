@@ -45,11 +45,9 @@ public class AgoraVaiApplication {
 	private UsuarioService usuarioService;
 	
 	
-	
-	
-	
-	//LOGO A BAIXO TEMOS UM EXEMPLO DA INSERÇAO E REALIZAÇAO DE UMA TAREFA MANUALMENTE.
-	//@Bean
+//	LOGO A BAIXO TEMOS UM EXEMPLO DA INSERÇAO E REALIZAÇAO DE UMA TAREFA MANUALMENTE.
+//	@Bean
+//	public CommandLineRunner commandLineRunner() {
 //		return args -> {
 //			Usuario usuario = new Usuario();
 //			usuario.setNome("Igor");
@@ -85,15 +83,29 @@ public class AgoraVaiApplication {
 //			List<Tarefa> tarefas = tarefaRepository.findAll();
 //			tarefas.forEach(System.out::println);
 //
+//			Long tarefaId = tarefa.getId();
+//			
+//			System.out.println("Id da tarefa é : " + tarefaId);
+//			
+//			//Tarefa tarefaSalvar = tarefaRepository.deleteById(tarefaId);
+//			
 //			Atividade atividade = new Atividade();
 //			atividade.setNome("Passar pano");
 //			atividade.setRealizada(true);
 //			atividade.setTarefa(tarefa);
+//			
 //			this.atividadeRepository.save(atividade);
 //			List<Atividade> atividades = atividadeRepository.findAll();
 //			atividades.forEach(System.out::println);
 //			
+//			System.out.println("ATIVIDADE: " + atividades);
 //		};
 //	}
-
+	
 }
+	
+	
+
+		
+
+

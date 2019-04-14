@@ -1,6 +1,7 @@
 package com.checklist.api.repositories;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -23,4 +24,6 @@ public interface TarefaRepository extends JpaRepository<Tarefa, Long>{
 	List<Tarefa> findByUsuarioId(@Param("usuarioId") Long usuarioId);
 	
 	Page<Tarefa> findByUsuarioId(@Param("usuarioId") Long usuarioId, Pageable pageable);
+	
+	Optional<Tarefa> findById(Long id);
 }
