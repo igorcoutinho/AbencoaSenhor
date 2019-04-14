@@ -17,7 +17,7 @@ import com.checklist.api.entities.Tarefa;
 @Transactional(readOnly = true)
 @NamedQueries({
 		@NamedQuery(name = "TarefaRepository.findByUsuarioId", 
-				query = "SELECT tar FROM Usuario tar WHERE tar.usuario.id = :usuarioId") })
+				query = "SELECT tar FROM Tarefa tar WHERE tar.usuario.id = :usuarioId") })
 public interface TarefaRepository extends JpaRepository<Tarefa, Long>{
 
 	List<Tarefa> findByUsuarioId(@Param("usuarioId") Long usuarioId);

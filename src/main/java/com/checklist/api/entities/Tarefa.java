@@ -1,6 +1,7 @@
 package com.checklist.api.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
@@ -22,8 +24,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.checklist.api.enums.TipoPeriodicidade;
-
-
 
 
 @Entity
@@ -39,7 +39,7 @@ public class Tarefa implements Serializable {
 	private TipoPeriodicidade tipo;
 	private Date dataRealizacao;
 	private Boolean finalizada;
-	private List<Atividade> atividades;
+	private List<Atividade> atividades = new ArrayList<>();
 	
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -108,6 +108,7 @@ public class Tarefa implements Serializable {
 	}
 	
 	@OneToMany(mappedBy = "tarefa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	@JoinColumn(name = "usuarioId")
 	public List<Atividade> getAtividades() {
 		return atividades;
 	}

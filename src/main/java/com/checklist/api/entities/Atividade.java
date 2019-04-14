@@ -24,7 +24,7 @@ public class Atividade implements Serializable{
 	private Boolean realizada;
 	private Date dataCriacao;
 	private Date dataAtualizacao;
-	private Atividade atividade;
+	private Tarefa tarefa;
 	
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -66,15 +66,14 @@ public class Atividade implements Serializable{
 	public void setDataAtualizacao(Date dataAtualizacao) {
 		this.dataAtualizacao = dataAtualizacao;
 	}
-	
+
 	@ManyToOne(fetch = FetchType.EAGER)
-	public Atividade getAtividade() {
-		return atividade;
+	public Tarefa getTarefa() {
+		return tarefa;
 	}
-	public void setAtividade(Atividade atividade) {
-		this.atividade = atividade;
+	public void setTarefa(Tarefa tarefa) {
+		this.tarefa = tarefa;
 	}
-	
 	
 	@PreUpdate
     public void preUpdate() {
@@ -87,11 +86,7 @@ public class Atividade implements Serializable{
         dataCriacao = atual;
         dataAtualizacao = atual;
     }
-	@Override
-	public String toString() {
-		return "Atividade [id=" + id + ", nome=" + nome + ", realizada=" + realizada + ", dataCriacao=" + dataCriacao
-				+ ", dataAtualizacao=" + dataAtualizacao + ", atividade=" + atividade + "]";
-	}
+	
     
 
 	
