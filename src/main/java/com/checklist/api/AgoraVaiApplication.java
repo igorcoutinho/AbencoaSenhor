@@ -44,12 +44,7 @@ public class AgoraVaiApplication {
 	@Autowired
 	private UsuarioService usuarioService;
 	
-	@Bean
-	public CommandLineRunner commandLineRunner() {
-		return args-> {
-		this.usuarioService.testarUsuarioService();
-			};
-		}
+	
 	
 	
 	
