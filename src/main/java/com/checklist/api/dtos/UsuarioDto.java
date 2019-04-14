@@ -1,5 +1,10 @@
 package com.checklist.api.dtos;
 
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.br.CPF;
+
 public class UsuarioDto {
 
 	private Long id;
@@ -18,6 +23,8 @@ public class UsuarioDto {
 		this.id = id;
 	}
 
+	@NotEmpty(message = "Nome é obrigatório")
+	@Length(min = 5, max = 200, message = "O nome deve ter entre 5 e 200 caracteres.")
 	public String getNome() {
 		return nome;
 	}
@@ -25,12 +32,14 @@ public class UsuarioDto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
+	
+	@NotEmpty(message = "CPF é obrigatório")
+	@CPF(message = "CPF é inválido")
 	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCnpj(String cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
