@@ -22,7 +22,7 @@ import com.checklist.api.repositories.UsuarioRepository;;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ActiveProfiles("test")
-public class EmpresaServiceTest {
+public class UsuarioServiceTest {
 
 	@MockBean
 	private UsuarioRepository usuarioRepository;
