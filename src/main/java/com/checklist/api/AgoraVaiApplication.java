@@ -16,6 +16,7 @@ import com.checklist.api.enums.TipoPeriodicidade;
 import com.checklist.api.repositories.AtividadeRepository;
 import com.checklist.api.repositories.TarefaRepository;
 import com.checklist.api.repositories.UsuarioRepository;
+import com.checklist.api.services.UsuarioService;
 
 
 
@@ -36,6 +37,18 @@ public class AgoraVaiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AgoraVaiApplication.class, args);
 	}
+	
+	
+	@Autowired
+	private UsuarioService usuarioService;
+	
+	@Bean
+	public CommandLineRunner commandLineRunner() {
+		return args-> {
+		this.usuarioService.testarUsuarioService();
+			};
+		}
+	
 	
 	
 	//LOGO A BAIXO TEMOS UM EXEMPLO DA INSERÇAO E REALIZAÇAO DE UMA TAREFA MANUALMENTE.
