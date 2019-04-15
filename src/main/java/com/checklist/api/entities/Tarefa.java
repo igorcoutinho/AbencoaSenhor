@@ -32,11 +32,10 @@ public class Tarefa implements Serializable {
 	private static final long serialVersionUID = -5754246207015712518L;
 	
 	private Long id;
-	private String nomeTarefa;
+	private String nome;
 	private Date dataCriacao;
 	private Date dataAtualizacao;
-	private Usuario usuario;
-	private TipoPeriodicidade tipo;
+	private String tipo;
 	private Date dataRealizacao;
 	private Boolean finalizada;
 	private List<Atividade> atividades = new ArrayList<>();
@@ -50,12 +49,12 @@ public class Tarefa implements Serializable {
 		this.id = id;
 	}
 	
-	@Column(name = "nome_tarefa", nullable = false)
-	public String getNomeTarefa() {
-		return nomeTarefa;
+	@Column(name = "nome", nullable = false)
+	public String getNome() {
+		return nome;
 	}
-	public void setNomeTarefa(String nomeTarefa) {
-		this.nomeTarefa = nomeTarefa;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	
 	@Column(name = "data_criacao", nullable = false)
@@ -74,23 +73,14 @@ public class Tarefa implements Serializable {
 		this.dataAtualizacao = dataAtualizacao;
 	}
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	public Usuario getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
 	
-	@Enumerated(EnumType.STRING)
 	@Column(name = "tipo", nullable = false)
-	public TipoPeriodicidade getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
-	public void setTipo(TipoPeriodicidade tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "data_realizacao", nullable = true)
 	public Date getDataRealizacao() {
@@ -129,8 +119,8 @@ public class Tarefa implements Serializable {
     }
 	@Override
 	public String toString() {
-		return "Tarefa [id=" + id + ", nomeTarefa=" + nomeTarefa + ", dataCriacao=" + dataCriacao + ", dataAtualizacao="
-				+ dataAtualizacao + ", usuario=" + usuario + ", tipo=" + tipo + ", dataRealizacao=" + dataRealizacao
+		return "Tarefa [id=" + id + ", nomeTarefa=" + nome + ", dataCriacao=" + dataCriacao + ", dataAtualizacao="
+				+ dataAtualizacao + ", tipo=" + tipo + ", dataRealizacao=" + dataRealizacao
 				+ ", finalizada=" + finalizada + "]";
 	}
     

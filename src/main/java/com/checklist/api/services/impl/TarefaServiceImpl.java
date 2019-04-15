@@ -5,8 +5,6 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.checklist.api.entities.Tarefa;
@@ -20,22 +18,24 @@ public class TarefaServiceImpl implements TarefaService{
 	@Autowired
 	private TarefaRepository tarefaRepository;
 	
-	public Page<Tarefa> buscarPorUsuarioId(Long usuarioId, PageRequest pageRequest) {
-		log.info("Buscando tareafas para o usuario ID {}", usuarioId);
-		return this.tarefaRepository.findByUsuarioId(usuarioId, pageRequest);
-	}
 	
+	@Override
 	public Tarefa persistir(Tarefa tarefa) {
 		log.info("Persistindo tarefa: {}", tarefa);
 		return this.tarefaRepository.save(tarefa);
 	}
 	
+	@Override
 	public Optional<Tarefa> buscarPorId(Long id) {
-		log.info("Buscando tarefa pelo IDl {}", id);
+		log.info("Buscando tarefa pelo ID {}", id);
 		return this.tarefaRepository.findById(id);
 	}
 	
-
+	@Override
+	public Optional<Tarefa> buscarPorNome(String nome) {
+		log.info("Buscando funcionário pelo email {}", nome);
+		return Optional.ofNullable(this.tarefaRepository.findByNome(nome));
+	}
 	
 	
 }

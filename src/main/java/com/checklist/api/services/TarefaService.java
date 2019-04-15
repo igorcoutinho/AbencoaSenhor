@@ -8,6 +8,7 @@ import org.springframework.data.domain.PageRequest;
 import com.checklist.api.entities.Tarefa;
 
 
+
 public interface TarefaService {
 
 	/**
@@ -27,11 +28,10 @@ public interface TarefaService {
 	Optional<Tarefa> buscarPorId(Long id);
 	
 	/**
-	 * Retorna uma lista paginada de tarefas de um determinado usuario.
+	 * Busca e retorma uma atividade por um nome.
 	 * 
-	 * @param usuarioId
-	 * @param pageRequest
-	 * @return Page<Lancamento>
+	 * @param nome
+	 * @return Optional<Tarefa>
 	 */
-	Page<Tarefa> buscarPorUsuarioId(Long usuarioId, PageRequest pageRequest);
+	Optional<Tarefa> buscarPorNome(String nome);
 }

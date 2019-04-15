@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +14,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.checklist.api.enums.TipoPeriodicidade;
 
 @Entity
 @Table(name = "atividade")
@@ -20,10 +26,11 @@ public class Atividade implements Serializable{
 	private static final long serialVersionUID = -8890257248440524580L;
 	
 	private Long id;
-	private String nome;
-	private Boolean realizada;
+	private Date data;
+	private String descricao;
 	private Date dataCriacao;
 	private Date dataAtualizacao;
+	private TipoPeriodicidade tipo;
 	private Tarefa tarefa;
 	
 	@Id
@@ -34,21 +41,24 @@ public class Atividade implements Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	
+	@Column(name = "descricao", nullable = true)
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 	
-	@Column(name = "nome", nullable = false)
-	public void setNome(String nome) {
-		this.nome = nome;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "data", nullable = false)
+	public Date getData() {
+		return data;
 	}
-	public Boolean getRealizada() {
-		return realizada;
-	}
-	
-	@Column(name = "realizada", nullable = false)
-	public void setRealizada(Boolean realizada) {
-		this.realizada = realizada;
+
+	public void setData(Date data) {
+		this.data = data;
 	}
 	
 	@Column(name = "data_criacao", nullable = false)
@@ -73,6 +83,16 @@ public class Atividade implements Serializable{
 	}
 	public void setTarefa(Tarefa tarefa) {
 		this.tarefa = tarefa;
+	}
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "tipo", nullable = false)
+	public TipoPeriodicidade getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoPeriodicidade tipo) {
+		this.tipo = tipo;
 	}
 	
 	@PreUpdate

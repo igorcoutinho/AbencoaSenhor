@@ -1,0 +1,63 @@
+2019-04-15 00:04:18.507  INFO 40130 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Starting AgoraVaiApplication on MacBook-Pro-de-Igor.local with PID 40130 (/Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai/target/classes started by igoralcoutinhogmail.com in /Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai)
+2019-04-15 00:04:18.507  INFO 40130 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : No active profile set, falling back to default profiles: default
+2019-04-15 00:04:18.821  INFO 40130 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-15 00:04:18.834  INFO 40130 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 3 repository interfaces.
+2019-04-15 00:04:18.883  INFO 40130 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$34dbdd49] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-15 00:04:18.953  INFO 40130 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-15 00:04:18.955  INFO 40130 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-15 00:04:18.955  INFO 40130 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-15 00:04:18.970  INFO 40130 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-15 00:04:18.970 DEBUG 40130 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-04-15 00:04:18.971  INFO 40130 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 463 ms
+2019-04-15 00:04:19.074  INFO 40130 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-04-15 00:04:19.076  INFO 40130 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-04-15 00:04:19.084  INFO 40130 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-15 00:04:19.096  INFO 40130 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-04-15 00:04:19.184  INFO 40130 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3c0758b1'
+2019-04-15 00:04:19.184  INFO 40130 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:04:19.207  INFO 40130 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-04-15 00:04:19.418  WARN 40130 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-15 00:04:19.432 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.AtividadeController:
+	{DELETE /api/atividades/{id}}: remover(Long)
+	{GET /api/atividades/tarefa/{tarefaId}}: listarPorFuncionarioId(Long,int,String,String)
+	{GET /api/atividades/{id}}: listarPorId(Long)
+	{POST /api/atividades}: adicionar(AtividadeDto,BindingResult)
+	{PUT /api/atividades/{id}}: atualizar(Long,AtividadeDto,BindingResult)
+2019-04-15 00:04:19.434 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.TarefaController:
+	{POST /api/cadastrar-tarefa}: cadastrar(CadastroTarefaDto,BindingResult)
+2019-04-15 00:04:19.435 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.UsuarioController:
+	{POST /api/cadastrar-usuario}: cadastrar(CadastroUsuarioDto,BindingResult)
+2019-04-15 00:04:19.436 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2Controller:
+	{GET /v2/api-docs, produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2019-04-15 00:04:19.437 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{ /swagger-resources/configuration/ui}: uiConfiguration()
+	{ /swagger-resources/configuration/security}: securityConfiguration()
+	{ /swagger-resources}: swaggerResources()
+2019-04-15 00:04:19.439 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ /error}: error(HttpServletRequest)
+	{ /error, produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2019-04-15 00:04:19.441 DEBUG 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2019-04-15 00:04:19.474 TRACE 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**/favicon.ico] onto ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]
+2019-04-15 00:04:19.474 DEBUG 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-04-15 00:04:19.503  INFO 40130 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:04:19.509 DEBUG 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-04-15 00:04:19.512 DEBUG 40130 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2019-04-15 00:04:19.514 TRACE 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+2019-04-15 00:04:19.514 TRACE 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-04-15 00:04:19.514 DEBUG 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-04-15 00:04:19.519 DEBUG 40130 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-04-15 00:04:19.561  INFO 40130 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-15 00:04:19.562  INFO 40130 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-15 00:04:19.565  INFO 40130 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-15 00:04:19.627  INFO 40130 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: cadastrarUsingPOST_1
+2019-04-15 00:04:19.634  INFO 40130 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-15 00:04:19.636  INFO 40130 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Started AgoraVaiApplication in 1.39 seconds (JVM running for 500.077)
+2019-04-15 00:04:19.648  INFO 40130 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

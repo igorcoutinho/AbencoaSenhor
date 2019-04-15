@@ -30,7 +30,7 @@ public class Usuario implements Serializable {
 	private Date dataAtualizacao;
 	private String email;
 	private String senha;
-	private List<Tarefa> tarefas;
+	
 	
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -88,14 +88,6 @@ public class Usuario implements Serializable {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	@OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	public List<Tarefa> getTarefas() {
-		return tarefas;
-	}
-	public void setTarefas(List<Tarefa> tarefas) {
-		this.tarefas = tarefas;
-	} 
 	
 	@PreUpdate
     public void preUpdate() {
