@@ -10,8 +10,11 @@ Para que a API execute sem problema será necessario:
 
 Para importar o projeto: 
 Import > Maven > Existing maven projects > next > Seleciona o caminho onde está o projeto > finish.
+
 É imporante que espere um pouco antes de executar a aplicação, pois alguns pacotes poderão ser baixados.
+
 Para executar o projeto clica no nome da aplicação com o botão direito > Run AS> 9 Spring boot App
+
 
 
 Todas as funcionalidades podem ser acessadas através de : 
@@ -24,8 +27,10 @@ Em atividade-controler:
 /api/atividades (POST)
 É possivel cadastrar as tarefas com suas respectivas atividades
 
+
 /api/atividades/tarefa/{tarefaId} (GET)
 É possivel listar todas as atividades de uma respectiva tarefa
+
 
 /api/atividades/{id} (DELETE)
 É possível excluir uma atividade passando seu respecitivo id
@@ -33,11 +38,14 @@ Em atividade-controler:
 /api/atividades/{id} (PUT)
 Faz atualização de dados, seja ele tarefa ou atividade e ambos.
 
+
 Em usuarios-controller:
 É possível adicionar um usuário
 
+
 Os logs podem ser observados dentro de um arquivo no projeto chamado: my.log
 E também clicando no "build" (icone verde) logo em cima do título.
+
 
 Também foram realizados criados alguns testes unitários.
 
