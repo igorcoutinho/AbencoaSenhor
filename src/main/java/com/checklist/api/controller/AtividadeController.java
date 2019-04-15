@@ -69,7 +69,7 @@ public class AtividadeController {
 	 * @return ResponseEntity<Response<AtividadeDto>>
 	 */
 	@GetMapping(value = "/tarefa/{tarefaId}")
-	public ResponseEntity<Response<Page<AtividadeDto>>> listarPorFuncionarioId(
+	public ResponseEntity<Response<Page<AtividadeDto>>> listarPorTarefaId(
 			@PathVariable("tarefaId") Long tarefaId,
 			@RequestParam(value = "pag", defaultValue = "0") int pag,
 			@RequestParam(value = "ord", defaultValue = "id") String ord,
