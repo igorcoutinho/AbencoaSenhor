@@ -61,3 +61,388 @@
 2019-04-15 00:04:19.634  INFO 40130 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2019-04-15 00:04:19.636  INFO 40130 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Started AgoraVaiApplication in 1.39 seconds (JVM running for 500.077)
 2019-04-15 00:04:19.648  INFO 40130 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-04-15 00:18:48.628  INFO 40130 --- [Thread-16] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:18:48.634  INFO 40130 --- [Thread-16] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:18:48.635  INFO 40130 --- [Thread-16] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-04-15 00:18:48.649  INFO 40130 --- [Thread-16] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-04-15 00:18:48.649  INFO 40130 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-04-15 00:18:48.651  INFO 40130 --- [Thread-16] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-04-15 00:18:49.384  INFO 40130 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Starting AgoraVaiApplication on MacBook-Pro-de-Igor.local with PID 40130 (/Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai/target/classes started by igoralcoutinhogmail.com in /Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai)
+2019-04-15 00:18:49.384  INFO 40130 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : No active profile set, falling back to default profiles: default
+2019-04-15 00:18:50.086  INFO 40130 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-15 00:18:50.219  INFO 40130 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132ms. Found 3 repository interfaces.
+2019-04-15 00:18:50.340  INFO 40130 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$34dbdd49] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-15 00:18:50.554  INFO 40130 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-15 00:18:50.556  INFO 40130 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-15 00:18:50.556  INFO 40130 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-15 00:18:50.570  INFO 40130 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-15 00:18:50.570 DEBUG 40130 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-04-15 00:18:50.570  INFO 40130 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1183 ms
+2019-04-15 00:18:50.667  INFO 40130 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-04-15 00:18:50.674  INFO 40130 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-04-15 00:18:50.685  INFO 40130 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-15 00:18:50.700  INFO 40130 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-04-15 00:18:50.883  INFO 40130 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3c0758b1'
+2019-04-15 00:18:50.884  INFO 40130 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:18:50.907  INFO 40130 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-04-15 00:18:51.153  WARN 40130 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-15 00:18:51.175 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.AtividadeController:
+	{DELETE /api/atividades/{id}}: remover(Long)
+	{GET /api/atividades/tarefa/{tarefaId}}: listarPorFuncionarioId(Long,int,String,String)
+	{GET /api/atividades/{id}}: listarPorId(Long)
+	{POST /api/atividades}: adicionar(AtividadeDto,BindingResult)
+	{PUT /api/atividades/{id}}: atualizar(Long,AtividadeDto,BindingResult)
+2019-04-15 00:18:51.179 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.TarefaController:
+	{POST /api/cadastrar-tarefa}: cadastrar(CadastroTarefaDto,BindingResult)
+2019-04-15 00:18:51.180 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.UsuarioController:
+	{POST /api/cadastrar-usuario}: cadastrar(CadastroUsuarioDto,BindingResult)
+2019-04-15 00:18:51.181 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2Controller:
+	{GET /v2/api-docs, produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2019-04-15 00:18:51.184 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{ /swagger-resources/configuration/ui}: uiConfiguration()
+	{ /swagger-resources/configuration/security}: securityConfiguration()
+	{ /swagger-resources}: swaggerResources()
+2019-04-15 00:18:51.186 TRACE 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ /error}: error(HttpServletRequest)
+	{ /error, produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2019-04-15 00:18:51.190 DEBUG 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2019-04-15 00:18:51.243 TRACE 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**/favicon.ico] onto ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]
+2019-04-15 00:18:51.243 DEBUG 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-04-15 00:18:51.302  INFO 40130 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:18:51.311 DEBUG 40130 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-04-15 00:18:51.316 DEBUG 40130 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2019-04-15 00:18:51.320 TRACE 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+2019-04-15 00:18:51.320 TRACE 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-04-15 00:18:51.320 DEBUG 40130 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-04-15 00:18:51.328 DEBUG 40130 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-04-15 00:18:51.430  INFO 40130 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-15 00:18:51.431  INFO 40130 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-15 00:18:51.437  INFO 40130 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-15 00:18:51.523  INFO 40130 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: cadastrarUsingPOST_1
+2019-04-15 00:18:51.531  INFO 40130 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-15 00:18:51.533  INFO 40130 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Started AgoraVaiApplication in 2.332 seconds (JVM running for 1371.95)
+2019-04-15 00:18:51.537  INFO 40130 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-04-15 00:19:24.153  INFO 40415 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Starting AgoraVaiApplication on MacBook-Pro-de-Igor.local with PID 40415 (/Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai/target/classes started by igoralcoutinhogmail.com in /Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai)
+2019-04-15 00:19:24.156  INFO 40415 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : No active profile set, falling back to default profiles: default
+2019-04-15 00:19:24.185  INFO 40415 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-04-15 00:19:24.185  INFO 40415 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-04-15 00:19:24.848  INFO 40415 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-15 00:19:24.903  INFO 40415 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 3 repository interfaces.
+2019-04-15 00:19:25.153  INFO 40415 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c15b9e3c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-15 00:19:25.400  INFO 40415 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-15 00:19:25.418  INFO 40415 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-15 00:19:25.418  INFO 40415 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-15 00:19:25.505  INFO 40415 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-15 00:19:25.506 DEBUG 40415 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-04-15 00:19:25.506  INFO 40415 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1321 ms
+2019-04-15 00:19:25.621  INFO 40415 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-15 00:19:25.769  INFO 40415 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-15 00:19:25.803  INFO 40415 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-15 00:19:25.834  INFO 40415 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-15 00:19:25.836  INFO 40415 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-15 00:19:25.908  INFO 40415 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-15 00:19:25.990  INFO 40415 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-04-15 00:19:26.425  INFO 40415 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4df5fc0e'
+2019-04-15 00:19:26.427  INFO 40415 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:19:26.455  WARN 40415 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-04-15 00:19:26.854  WARN 40415 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-15 00:19:26.906 TRACE 40415 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.AtividadeController:
+	{GET /api/atividades/tarefa/{tarefaId}}: listarPorFuncionarioId(Long,int,String,String)
+	{GET /api/atividades/{id}}: listarPorId(Long)
+	{POST /api/atividades}: adicionar(AtividadeDto,BindingResult)
+	{PUT /api/atividades/{id}}: atualizar(Long,AtividadeDto,BindingResult)
+	{DELETE /api/atividades/{id}}: remover(Long)
+2019-04-15 00:19:26.910 TRACE 40415 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.TarefaController:
+	{POST /api/cadastrar-tarefa}: cadastrar(CadastroTarefaDto,BindingResult)
+2019-04-15 00:19:26.911 TRACE 40415 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.UsuarioController:
+	{POST /api/cadastrar-usuario}: cadastrar(CadastroUsuarioDto,BindingResult)
+2019-04-15 00:19:26.913 TRACE 40415 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2Controller:
+	{GET /v2/api-docs, produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2019-04-15 00:19:26.915 TRACE 40415 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{ /swagger-resources/configuration/ui}: uiConfiguration()
+	{ /swagger-resources/configuration/security}: securityConfiguration()
+	{ /swagger-resources}: swaggerResources()
+2019-04-15 00:19:26.919 TRACE 40415 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ /error}: error(HttpServletRequest)
+	{ /error, produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2019-04-15 00:19:26.923 DEBUG 40415 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2019-04-15 00:19:26.983 TRACE 40415 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**/favicon.ico] onto ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]
+2019-04-15 00:19:26.983 DEBUG 40415 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-04-15 00:19:27.056  INFO 40415 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:19:27.074 DEBUG 40415 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-04-15 00:19:27.092 DEBUG 40415 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2019-04-15 00:19:27.096 TRACE 40415 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+2019-04-15 00:19:27.097 TRACE 40415 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-04-15 00:19:27.097 DEBUG 40415 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-04-15 00:19:27.102 DEBUG 40415 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-04-15 00:19:27.207  INFO 40415 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-15 00:19:27.217  INFO 40415 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-15 00:19:27.226  INFO 40415 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-15 00:19:27.379  INFO 40415 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: cadastrarUsingPOST_1
+2019-04-15 00:19:27.414 ERROR 40415 --- [restartedMain] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at com.checklist.api.AgoraVaiApplication.main(AgoraVaiApplication.java:40) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_201]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_201]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_201]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_201]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_201]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1103) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1189) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	... 19 common frames omitted
+
+2019-04-15 00:19:27.417  INFO 40415 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-04-15 00:19:27.423  INFO 40415 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-04-15 00:19:27.426 ERROR 40415 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-04-15 00:19:27.429  INFO 40415 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:19:27.430  INFO 40415 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:19:27.431  INFO 40415 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-04-15 00:19:27.439  INFO 40415 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-04-15 00:19:27.440  INFO 40415 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-15 00:19:27.441  INFO 40415 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-15 00:19:44.184  INFO 40130 --- [RMI TCP Connection(67)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-15 00:19:44.187  INFO 40130 --- [RMI TCP Connection(67)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:19:44.188  INFO 40130 --- [RMI TCP Connection(67)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:19:44.188  INFO 40130 --- [RMI TCP Connection(67)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-04-15 00:19:44.193  INFO 40130 --- [RMI TCP Connection(67)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-04-15 00:19:44.193  INFO 40130 --- [RMI TCP Connection(67)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-04-15 00:19:44.194  INFO 40130 --- [RMI TCP Connection(67)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-04-15 00:19:51.040  INFO 40423 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Starting AgoraVaiApplication on MacBook-Pro-de-Igor.local with PID 40423 (/Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai/target/classes started by igoralcoutinhogmail.com in /Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai)
+2019-04-15 00:19:51.043  INFO 40423 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : No active profile set, falling back to default profiles: default
+2019-04-15 00:19:51.068  INFO 40423 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-04-15 00:19:51.068  INFO 40423 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-04-15 00:19:51.714  INFO 40423 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-15 00:19:51.769  INFO 40423 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 3 repository interfaces.
+2019-04-15 00:19:52.022  INFO 40423 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$70a5b4e7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-15 00:19:52.257  INFO 40423 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-15 00:19:52.273  INFO 40423 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-15 00:19:52.273  INFO 40423 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-15 00:19:52.361  INFO 40423 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-15 00:19:52.361 DEBUG 40423 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-04-15 00:19:52.361  INFO 40423 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1293 ms
+2019-04-15 00:19:52.469  INFO 40423 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-15 00:19:52.616  INFO 40423 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-15 00:19:52.650  INFO 40423 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-15 00:19:52.682  INFO 40423 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-15 00:19:52.683  INFO 40423 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-15 00:19:52.755  INFO 40423 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-15 00:19:52.836  INFO 40423 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-04-15 00:19:53.295  INFO 40423 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1e77bcee'
+2019-04-15 00:19:53.298  INFO 40423 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:19:53.326  INFO 40423 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-04-15 00:19:53.729  WARN 40423 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-15 00:19:53.758 TRACE 40423 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.AtividadeController:
+	{GET /api/atividades/tarefa/{tarefaId}}: listarPorFuncionarioId(Long,int,String,String)
+	{GET /api/atividades/{id}}: listarPorId(Long)
+	{POST /api/atividades}: adicionar(AtividadeDto,BindingResult)
+	{PUT /api/atividades/{id}}: atualizar(Long,AtividadeDto,BindingResult)
+	{DELETE /api/atividades/{id}}: remover(Long)
+2019-04-15 00:19:53.762 TRACE 40423 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.TarefaController:
+	{POST /api/cadastrar-tarefa}: cadastrar(CadastroTarefaDto,BindingResult)
+2019-04-15 00:19:53.763 TRACE 40423 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.UsuarioController:
+	{POST /api/cadastrar-usuario}: cadastrar(CadastroUsuarioDto,BindingResult)
+2019-04-15 00:19:53.764 TRACE 40423 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2Controller:
+	{GET /v2/api-docs, produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2019-04-15 00:19:53.766 TRACE 40423 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{ /swagger-resources/configuration/security}: securityConfiguration()
+	{ /swagger-resources/configuration/ui}: uiConfiguration()
+	{ /swagger-resources}: swaggerResources()
+2019-04-15 00:19:53.768 TRACE 40423 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ /error}: error(HttpServletRequest)
+	{ /error, produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2019-04-15 00:19:53.772 DEBUG 40423 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2019-04-15 00:19:53.833 TRACE 40423 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**/favicon.ico] onto ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]
+2019-04-15 00:19:53.833 DEBUG 40423 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-04-15 00:19:53.900  INFO 40423 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:19:53.915 DEBUG 40423 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-04-15 00:19:53.931 DEBUG 40423 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2019-04-15 00:19:53.935 TRACE 40423 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+2019-04-15 00:19:53.935 TRACE 40423 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-04-15 00:19:53.935 DEBUG 40423 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-04-15 00:19:53.942 DEBUG 40423 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-04-15 00:19:54.047  INFO 40423 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-15 00:19:54.059  INFO 40423 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-15 00:19:54.070  INFO 40423 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-15 00:19:54.219  INFO 40423 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: cadastrarUsingPOST_1
+2019-04-15 00:19:54.259  INFO 40423 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-15 00:19:54.262  INFO 40423 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Started AgoraVaiApplication in 3.439 seconds (JVM running for 3.955)
+2019-04-15 00:20:02.765  INFO 40423 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-15 00:20:02.765  INFO 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-15 00:20:02.765 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@1ef52b7e
+2019-04-15 00:20:02.767 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No LocaleResolver 'localeResolver': using default [AcceptHeaderLocaleResolver]
+2019-04-15 00:20:02.768 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No ThemeResolver 'themeResolver': using default [FixedThemeResolver]
+2019-04-15 00:20:02.770 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No RequestToViewNameTranslator 'viewNameTranslator': using default [DefaultRequestToViewNameTranslator]
+2019-04-15 00:20:02.772 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No FlashMapManager 'flashMapManager': using default [SessionFlashMapManager]
+2019-04-15 00:20:02.772 DEBUG 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-04-15 00:20:02.772  INFO 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-04-15 00:20:02.783 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2019-04-15 00:20:02.788 TRACE 40423 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]] and 4 interceptors
+2019-04-15 00:20:02.790 DEBUG 40423 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2019-04-15 00:20:02.790 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2019-04-15 00:20:02.790 DEBUG 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2019-04-15 00:20:02.799 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2019-04-15 00:20:02.801 TRACE 40423 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ /error, produces [text/html]}, { /error}]
+2019-04-15 00:20:02.802 TRACE 40423 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-15 00:20:02.808 TRACE 40423 --- [http-nio-8080-exec-1] .w.s.m.m.a.ServletInvocableHandlerMethod : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@4e09c056, org.apache.catalina.connector.ResponseFacade@678ddb1f]
+2019-04-15 00:20:02.816 DEBUG 40423 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2019-04-15 00:20:02.816 TRACE 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView@37c37dfb] 
+2019-04-15 00:20:02.824 DEBUG 40423 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={}
+2019-04-15 00:20:02.950 TRACE 40423 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2019-04-15 00:20:02.950 TRACE 40423 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]] and 1 interceptors
+2019-04-15 00:20:02.970 TRACE 40423 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2019-04-15 00:20:02.970 DEBUG 40423 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2019-04-15 00:20:03.617 TRACE 40423 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2019-04-15 00:20:03.619 TRACE 40423 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]] and 4 interceptors
+2019-04-15 00:20:03.619 DEBUG 40423 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2019-04-15 00:20:03.620 TRACE 40423 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2019-04-15 00:20:03.620 DEBUG 40423 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2019-04-15 00:20:03.620 TRACE 40423 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2019-04-15 00:20:03.621 TRACE 40423 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ /error, produces [text/html]}, { /error}]
+2019-04-15 00:20:03.621 TRACE 40423 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-15 00:20:03.622 TRACE 40423 --- [http-nio-8080-exec-3] .w.s.m.m.a.ServletInvocableHandlerMethod : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@18aa0d13, org.apache.catalina.connector.ResponseFacade@678ddb1f]
+2019-04-15 00:20:03.630 TRACE 40423 --- [http-nio-8080-exec-3] o.s.w.s.v.InternalResourceViewResolver   : View with key [error] served from cache
+2019-04-15 00:20:03.630 DEBUG 40423 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2019-04-15 00:20:03.630 TRACE 40423 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$StaticView@37c37dfb] 
+2019-04-15 00:20:03.630 DEBUG 40423 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={}
+2019-04-15 00:20:03.678 TRACE 40423 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2019-04-15 00:20:03.679 TRACE 40423 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to HandlerExecutionChain with [ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]] and 1 interceptors
+2019-04-15 00:20:03.681 TRACE 40423 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2019-04-15 00:20:03.681 DEBUG 40423 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK, headers={masked}
+2019-04-15 00:20:19.295  INFO 40423 --- [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-15 00:20:19.298  INFO 40423 --- [RMI TCP Connection(9)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:20:19.300  INFO 40423 --- [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:20:19.301  INFO 40423 --- [RMI TCP Connection(9)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-04-15 00:20:19.310  INFO 40423 --- [RMI TCP Connection(9)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-199]
+2019-04-15 00:20:19.310  INFO 40423 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-15 00:20:19.312  INFO 40423 --- [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-15 00:25:32.245  INFO 40568 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Starting AgoraVaiApplication on MacBook-Pro-de-Igor.local with PID 40568 (/Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai/target/classes started by igoralcoutinhogmail.com in /Users/igoralcoutinhogmail.com/Desktop/worskpace/AgoraVai)
+2019-04-15 00:25:32.249  INFO 40568 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : No active profile set, falling back to default profiles: default
+2019-04-15 00:25:32.282  INFO 40568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-04-15 00:25:32.283  INFO 40568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-04-15 00:25:33.209  INFO 40568 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-15 00:25:33.276  INFO 40568 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 3 repository interfaces.
+2019-04-15 00:25:33.578  INFO 40568 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b942c6c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-15 00:25:33.858  INFO 40568 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-04-15 00:25:33.877  INFO 40568 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-15 00:25:33.877  INFO 40568 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-04-15 00:25:33.945  INFO 40568 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-15 00:25:33.945 DEBUG 40568 --- [restartedMain] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-04-15 00:25:33.945  INFO 40568 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1662 ms
+2019-04-15 00:25:34.057  INFO 40568 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-15 00:25:34.241  INFO 40568 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-15 00:25:34.277  INFO 40568 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-15 00:25:34.310  INFO 40568 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-04-15 00:25:34.312  INFO 40568 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-15 00:25:34.384  INFO 40568 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-15 00:25:34.482  INFO 40568 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-04-15 00:25:34.925  INFO 40568 --- [restartedMain] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3f21411'
+2019-04-15 00:25:34.927  INFO 40568 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-15 00:25:34.954  INFO 40568 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-04-15 00:25:35.377  WARN 40568 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-15 00:25:35.414 TRACE 40568 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.AtividadeController:
+	{DELETE /api/atividades/{id}}: remover(Long)
+	{GET /api/atividades/tarefa/{tarefaId}}: listarPorFuncionarioId(Long,int,String,String)
+	{GET /api/atividades/{id}}: listarPorId(Long)
+	{POST /api/atividades}: adicionar(AtividadeDto,BindingResult)
+	{PUT /api/atividades/{id}}: atualizar(Long,AtividadeDto,BindingResult)
+2019-04-15 00:25:35.418 TRACE 40568 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.TarefaController:
+	{POST /api/cadastrar-tarefa}: cadastrar(CadastroTarefaDto,BindingResult)
+2019-04-15 00:25:35.419 TRACE 40568 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.c.a.c.UsuarioController:
+	{POST /api/cadastrar-usuario}: cadastrar(CadastroUsuarioDto,BindingResult)
+2019-04-15 00:25:35.420 TRACE 40568 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.Swagger2Controller:
+	{GET /v2/api-docs, produces [application/json || application/hal+json]}: getDocumentation(String,HttpServletRequest)
+2019-04-15 00:25:35.422 TRACE 40568 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	s.d.s.w.ApiResourceController:
+	{ /swagger-resources/configuration/security}: securityConfiguration()
+	{ /swagger-resources/configuration/ui}: uiConfiguration()
+	{ /swagger-resources}: swaggerResources()
+2019-04-15 00:25:35.426 TRACE 40568 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ /error}: error(HttpServletRequest)
+	{ /error, produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2019-04-15 00:25:35.429 DEBUG 40568 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2019-04-15 00:25:35.505 TRACE 40568 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**/favicon.ico] onto ResourceHttpRequestHandler [class path resource [META-INF/resources/], class path resource [resources/], class path resource [static/], class path resource [public/], ServletContext resource [/], class path resource []]
+2019-04-15 00:25:35.506 DEBUG 40568 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2019-04-15 00:25:35.633  INFO 40568 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-15 00:25:35.647 DEBUG 40568 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-04-15 00:25:35.663 DEBUG 40568 --- [restartedMain] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2019-04-15 00:25:35.668 TRACE 40568 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+2019-04-15 00:25:35.668 TRACE 40568 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2019-04-15 00:25:35.668 DEBUG 40568 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2019-04-15 00:25:35.674 DEBUG 40568 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-04-15 00:25:35.779  INFO 40568 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-15 00:25:35.788  INFO 40568 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-04-15 00:25:35.797  INFO 40568 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-15 00:25:35.961  INFO 40568 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: cadastrarUsingPOST_1
+2019-04-15 00:25:36.001  INFO 40568 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-04-15 00:25:36.005  INFO 40568 --- [restartedMain] com.checklist.api.AgoraVaiApplication    : Started AgoraVaiApplication in 4.054 seconds (JVM running for 4.553)
